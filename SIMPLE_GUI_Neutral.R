@@ -23,7 +23,7 @@ cat("\n")
 # fonction 2 mutations independantes #
 ######################################
 
-SIMUI <- function(x,y,z,c,h,m,tgen) # x=r1, y=r2, z=g, c = cycle, h = size transient pop, m = increase of rates, tgen = generation of transiant hyperm
+SIMUI <- function(x,y,z,c,h,m) # x=r1, y=r2, z=g, c = cycle, h = size transient pop, m = increase of rates  # R:tgen = generation of transiant hyperm
 {
     #--------------------------------------
     # création des objets pour le calcul  |
@@ -262,7 +262,7 @@ while (continueWP!= "n")
         print(paste("simulation cycle : ",i," on ",n))
 
         # output results
-        S=SIMUI(r1,r2,g,i,hyp,mult,tgen)
+        S=SIMUI(r1,r2,g,i,hyp,mult)
         res[i,1]=S[1]
         res[i,2]=S[2]
         res[i,3]=S[3] 
